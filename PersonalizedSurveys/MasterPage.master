@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Personalized Surveys</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/MySyles1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:#0094ff">
+    <form id="form1" runat="server" method="post">
+        <div class="container-fluid">
+            <div class="jumbotron" style="border:1px #000 solid; margin-top:15px;margin-bottom:0px;
+                        padding-bottom:10px;padding-top:10px;">
+                <div style="float:right;">
+                    <asp:Label ID="Usernamelbl" runat="server" Text="Sign In"></asp:Label>
+                    <asp:Button ID="Logoutbtn" runat="server" Text="Logout" OnClick="Logoutbtn_OnClick"/>
+                </div>
+                <h1>Personalized Surveys</h1>
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="home.aspx">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="layoutmanager.aspx">Layout Manager</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="surveymanager.aspx">Survey Manager</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="viewsurveys.aspx">View Surveys</a>
+                  </li>
+                </ul>
+            </div>
+        <div class="jumbotron" style="border:1px #000 solid; margin-top:15px;margin-bottom:0px;
+                        padding-bottom:10px;padding-top:10px;">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
